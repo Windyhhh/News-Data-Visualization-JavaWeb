@@ -1,24 +1,35 @@
 <div align="center">
 
-# 📰 News-Data-Visualization-JavaWeb
+# 📊 News-Data-Visualization-JavaWeb
 
-### Real-time news data visualization with Java Web.
+### A JavaWeb news data-visualization platform with ECharts.
 
-Java Servlet + JSP, ECharts, JDBC and jQuery — a Maven-based real-time news visualization app.
+Real-time news metrics (views, exposure) visualized through Java Servlet + MySQL + ECharts, with linked charts and responsive UI.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-8+-007396?logo=openjdk&logoColor=white)](https://openjdk.org/)
-[![JSP](https://img.shields.io/badge/JSP-Servlet-orange)](https://www.oracle.com/java/technologies/jspt.html)
-[![ECharts](https://img.shields.io/badge/ECharts-5-AA344D?logo=apacheecharts&logoColor=white)](https://echarts.apache.org/)
+[![Java](https://img.shields.io/badge/Java-8-007396?logo=java&logoColor=white)](https://www.java.com/)
+[![Servlet](https://img.shields.io/badge/Servlet-4-007396)](https://jakarta.ee/specifications/servlet/)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![ECharts](https://img.shields.io/badge/ECharts-4-AA344D?logo=apacheecharts&logoColor=white)](https://echarts.apache.org/)
 
 </div>
 
 ---
 
-**News-Data-Visualization-JavaWeb** is a Maven-based real-time **news data visualization** web app built with **Java Servlet + JSP**, **JDBC**, **jQuery** and **ECharts**.
+**News-Data-Visualization-JavaWeb** is a news data-visualization platform built on the **JavaWeb** stack — **Java Servlet** backend, **MySQL** storage and **ECharts** frontend — presenting real-time news views / exposure with linked charts and a responsive UI.
 
 > [!NOTE]
-> 中文项目：Java Servlet + JSP，ECharts，JDBC，jQuery，Maven 实时新闻可视化。
+> 中文项目：新闻数据可视化平台——Java Servlet + MySQL + ECharts，实时话题曝光量/浏览量多图表联动展示。
+
+---
+
+## Features
+
+- **Real-time metrics** — news views, exposure, topic trends.
+- **Linked charts** — multi-chart interaction (ECharts 4.x).
+- **Responsive UI** — HTML5 + CSS3 + JavaScript.
+- **Relational storage** — MySQL data layer.
+- **Full stack** — Servlet backend serving chart data over HTTP.
 
 ---
 
@@ -28,19 +39,10 @@ Java Servlet + JSP, ECharts, JDBC and jQuery — a Maven-based real-time news vi
 git clone https://github.com/Windyhhh/News-Data-Visualization-JavaWeb.git
 cd News-Data-Visualization-JavaWeb
 
-# Deploy to Tomcat (run.bat for a quick setup)
-mvn clean package
+# 1. create the MySQL database & tables (see sql/init.sql)
+# 2. configure db credentials in webapp config
+# 3. deploy the WAR to Tomcat
 ```
-
-The servlet layer (`com.djt.servlet`) serves news data to the ECharts frontend via JDBC.
-
----
-
-## Features
-
-- **Servlet + JSP** — classic Java Web stack.
-- **ECharts visualization** — interactive news charts.
-- **JDBC data access** — `JDBCHelper` + config-driven datasource.
 
 ---
 
@@ -48,12 +50,13 @@ The servlet layer (`com.djt.servlet`) serves news data to the ECharts frontend v
 
 ```
 News-Data-Visualization-JavaWeb/
-├── src/main/java/com/djt/
-│   ├── servlet/          # NewsSvlt, TestServlet
-│   └── bean/             # ConfigurationManager, Constants, JDBCHelper
-├── src/main/webapp/      # index.jsp, echarts, jquery
-├── pom.xml
-└── run.bat
+├── src/                    # Java Servlet classes
+├── webapp/
+│   ├── WEB-INF/
+│   ├── css/ js/            # frontend
+│   └── index.html          # ECharts dashboard
+├── sql/init.sql            # schema
+└── docs/                   # blog, usage
 ```
 
 ---
