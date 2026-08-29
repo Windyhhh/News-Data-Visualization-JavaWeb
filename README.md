@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📊 News-Data-Visualization-JavaWeb
+# 新闻数据可视化 | News-Data-Visualization-JavaWeb
 
 ### A JavaWeb news data-visualization platform with ECharts.
 
